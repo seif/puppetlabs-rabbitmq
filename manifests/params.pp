@@ -81,6 +81,7 @@ class rabbitmq::params {
   $cluster_nodes               = []
   $config                      = 'rabbitmq/rabbitmq.config.erb'
   $config_cluster              = false
+  $config_mqtt                = false
   $config_path                 = '/etc/rabbitmq/rabbitmq.config'
   $config_stomp                = false
   $config_shovel               = false
@@ -92,6 +93,8 @@ class rabbitmq::params {
   $env_config_path             = '/etc/rabbitmq/rabbitmq-env.conf'
   $erlang_cookie               = undef
   $interface                   = 'UNSET'
+  $mqtt_ensure                = false
+  $mqtt_port                  = '1883'
   $node_ip_address             = 'UNSET'
   $port                        = '5672'
   $tcp_keepalive               = false
@@ -107,6 +110,7 @@ class rabbitmq::params {
   $ssl_port                    = '5671'
   $ssl_interface               = 'UNSET'
   $ssl_management_port         = '15671'
+  $ssl_mqtt_port              = '8883'
   $ssl_stomp_port              = '6164'
   $ssl_verify                  = 'verify_none'
   $ssl_fail_if_no_peer_cert    = false
